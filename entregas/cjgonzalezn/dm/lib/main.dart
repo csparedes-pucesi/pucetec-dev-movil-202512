@@ -25,7 +25,7 @@ class LoginPage extends StatelessWidget {
       // Cuerpo de la pantalla
       body: Center(
         child: SingleChildScrollView(
-          padding: EdgeInsets.all(20),
+          padding: EdgeInsets.all(19),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
