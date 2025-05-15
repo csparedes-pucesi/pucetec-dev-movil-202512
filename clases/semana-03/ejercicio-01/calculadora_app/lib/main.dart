@@ -15,6 +15,7 @@ class MyApp extends StatelessWidget {
       title: 'Material App',
       home: SafeArea(
         child: Scaffold(
+          backgroundColor: Colors.black12,
           appBar: AppBar(title: const Text('Calculadora App')),
           body: Center(
             child: Column(

@@ -1,8 +1,23 @@
 
 
-// formula
+// formula-> esto deley debe realziarse
+class Calculadora {
+  double sumar(double a, double b) {
+    return a + b;
+  }
 
-// numero
+  double restar(double a, double b) {
+    return a - b;
+  }
+
+  double multiplicar(double a, double b){
+    return a * b;
+  }
+    
+}
+
+
+// numero -> y este igual
 
 // numero previo
 
