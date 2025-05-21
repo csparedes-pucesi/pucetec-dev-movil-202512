@@ -1,5 +1,5 @@
 
-
+aqui va la logica
 // formula
 
 // numero
