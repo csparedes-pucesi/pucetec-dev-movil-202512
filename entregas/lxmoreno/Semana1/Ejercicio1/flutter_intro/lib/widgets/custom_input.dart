@@ -1,23 +1,22 @@
 import 'package:flutter/material.dart';
 
-class CustomInput extends StatelessWidget {
-  const CustomInput({super.key, required this.label, required this.hide});
+class CustomInputs extends StatelessWidget {
+  const CustomInputs({
+    super.key,
+    required this.label,
+    required this.hidden,
+  });
+
   final String label;
-  final bool hide;
+  final bool hidden;
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(10.0),
-      child: SizedBox(
-        width: double.infinity,
-        child: TextField(
-          obscureText: hide,
-          decoration: InputDecoration(
-            border: OutlineInputBorder(),
-            labelText: label,
-          ),
-        ),
+    return TextField(
+      obscureText: hidden, 
+      decoration: InputDecoration(
+        border: const OutlineInputBorder(),
+        labelText: label,
       ),
     );
   }
