@@ -1,0 +1,16 @@
+3. Crear una rama nueva para tu deber
+Por cada deber crea una rama con un nombre claro como deber1, deber2, etc.:
+git checkout -b deber1
+
+Esto crea y te mueve a esa nueva rama.
+
+💻 4. Desarrolla el deber en esa rama
+Haz todo lo que te pide el deber. Guarda, prueba, corre flutter pub get si hace falta, etc.
+
+✅ 5. Agrega, commitea y sube los cambios
+bash
+Copiar
+Editar
+git add .
+git commit -m "Deber 1 terminado"
+git push origin deber1

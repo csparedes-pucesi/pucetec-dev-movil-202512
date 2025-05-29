@@ -1,34 +1,29 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_intro/widgets/custom_input.dart';
+import 'package:flutter_intro/views/feature_view.dart';
+import 'package:flutter_intro/views/profile_view.dart';
+import 'views/login_view.dart'; 
+import 'views/dashboard_view.dart'; 
+import 'views/list_view.dart';
 
 void main() {
-  runApp(const MainApp());
+  runApp(const MyApp());
 }
 
-class MainApp extends StatelessWidget {
-  const MainApp({super.key});
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(title: Text('Login Page')),
-        body: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            CustomInput(label: 'Email', hide: false),
-            CustomInput(label: 'Password', hide: true),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 10),
-              child: SizedBox(
-                width: double.infinity,
-                child: ElevatedButton(onPressed: () {}, child: Text('Login')),
-              ),
-            ),
-          ],
-        ),
-      ),
+      title: 'Flutter App',
+      initialRoute: '/', 
+      routes: {
+        '/': (context) => const LoginView(),
+        '/dashboard': (context) => const DashboardView(),
+        '/feature': (context) => const FeatureView(),
+        '/profile': (context) => const ProfileView(),
+        '/list_view': (context) => const ListProductsView(),
+      },
     );
   }
-}
+}                             
