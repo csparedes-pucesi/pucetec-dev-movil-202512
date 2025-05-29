@@ -6,6 +6,7 @@ class ListProductsView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final IconData icon = Icons.shopping_bag;
 
     return Scaffold(
       appBar: AppBar(
@@ -18,7 +19,11 @@ class ListProductsView extends StatelessWidget {
       subtitle: Text('Descripción del producto'),
     ),
     ListTile(
+      leading: Icon(icon),
       title: Text('Producto 2'),
+      subtitle: Text('#54'),
+      selected: true,
+      trailing: Icon(icon),
     ),
   ],
 )
