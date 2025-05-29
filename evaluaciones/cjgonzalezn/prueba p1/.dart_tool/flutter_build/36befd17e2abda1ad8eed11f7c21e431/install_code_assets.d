@@ -1,0 +1,1 @@
+ /Users/imac18/Documents/dev/Flutter_S5/Cristopher_Gonzalez/evaluaciones/cjgonzalezn/prueba\ p1/.dart_tool/flutter_build/36befd17e2abda1ad8eed11f7c21e431/native_assets.json: 
