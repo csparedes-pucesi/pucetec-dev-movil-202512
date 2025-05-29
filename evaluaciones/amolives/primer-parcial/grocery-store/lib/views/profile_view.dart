@@ -1,16 +1,15 @@
-
 import 'package:flutter/material.dart';
 
-class ListProductsView extends StatelessWidget {
-  const ListProductsView({super.key});
+class ProfileView extends StatelessWidget {
+  const ProfileView({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Lista de Productos')),
+      appBar: AppBar(title: const Text('Perfil')),
       body: const Center(
         child: Text(
-          'Aquí se mostraran los productos',
+          'Esta es la vista del perfil de usuario',
           style: TextStyle(fontSize: 20),
         ),
       ),
