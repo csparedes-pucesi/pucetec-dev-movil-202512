@@ -18,7 +18,7 @@ class CartView extends StatelessWidget {
 
             ElevatedButton(
               onPressed: (){
-              Navigator.pushReplacementNamed(context, '/');
+              Navigator.pushReplacementNamed(context, '/confirmacion');
             },
               child: const Text('REALIZAR COMPRA'),
             )
