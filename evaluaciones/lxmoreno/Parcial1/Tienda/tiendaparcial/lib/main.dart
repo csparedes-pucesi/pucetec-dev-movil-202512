@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:tiendaparcial/views/carrito_view.dart';
 import 'package:tiendaparcial/views/confirmacion_view.dart';
 import 'package:tiendaparcial/views/dashboard_view.dart';
 import 'package:tiendaparcial/views/login_view.dart';
 import 'package:tiendaparcial/views/products_view.dart';
 
-void main() {
+void main() async{
+   await dotenv.load(fileName: ".env");
   runApp(const MyApp());
 }
 

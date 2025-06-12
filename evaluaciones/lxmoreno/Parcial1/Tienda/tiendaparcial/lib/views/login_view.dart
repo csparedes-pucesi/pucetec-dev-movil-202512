@@ -1,36 +1,43 @@
 import 'package:flutter/material.dart';
-import '../widgets/button_widget.dart';
+import 'package:tiendaparcial/services/login.service.dart';
+import 'package:tiendaparcial/widgets/button_widget.dart';
 
 class LoginViewPrueba extends StatelessWidget {
   const LoginViewPrueba({super.key});
 
-
   @override
   Widget build(BuildContext context) {
+    final TextEditingController usuarioController = TextEditingController();
+    final TextEditingController passwordController = TextEditingController();
+
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Login Page'),
-      ),
+      appBar: AppBar(title: const Text('Login Page')),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            const CustomInputs(label: 'Email', hidden: false),
+            GlobalFormTextWidget(
+              label: 'Usuario',
+              controller: usuarioController,
+            ),
             const SizedBox(height: 16),
-            const CustomInputs(label: 'Password', hidden: true),
+            GlobalFormTextWidget(
+              label: 'Password',
+              controller: passwordController,
+            ),
             const SizedBox(height: 24),
             ElevatedButton(
               style: ElevatedButton.styleFrom(
-              backgroundColor: Colors.blue, 
-              foregroundColor: Colors.white, 
-              padding: const EdgeInsets.symmetric(vertical: 16), 
-               ),
+                backgroundColor: Colors.blue,
+                foregroundColor: Colors.white,
+                padding: const EdgeInsets.symmetric(vertical: 16),
+              ),
               onPressed: () {
-                Navigator.pushReplacementNamed(context, '/dashboard');
+                print('${usuarioController.text}${passwordController.text}');
+                login(usuarioController.text, passwordController.text);
               },
-              child: const Text('Iniciar sesion'),
+              child: const Text('Iniciar sesión'),
             ),
           ],
         ),
